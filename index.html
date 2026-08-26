@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio e currículo de Natan Hespanhol - Software QA Engineer">
+    <title>Natan Hespanhol - Software QA Engineer</title>
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            var m = path.match(/^(.*\/proxy\/\d+)$/);
+            if (m && !path.endsWith('/')) {
+                window.location.replace(m[1] + '/' + window.location.search);
+            }
+        })();
+    </script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234F46E5'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3ENH%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#home">Skip to main content</a>
+    <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="nav-brand">NH</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#certifications" class="nav-link" data-i18n="nav.certifications">Certificações</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="pt" title="Português">🇧🇷 PT</button>
+                    <button class="lang-btn" data-lang="en" title="English">🇺🇸 EN</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas class="hero-particles" aria-hidden="true"></canvas>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
+                <h1 class="hero-name">Natan Hespanhol</h1>
+                <p class="hero-roles">
+                    <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description" data-i18n="hero.description"></p>
+                <div class="hero-cta">
+                    <a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span class="btn-icon">⬇</span>
+                        <span data-i18n="hero.btn.resume">Baixar Currículo (PDF)</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.btn.contact">Entre em Contato</a>
+                </div>
+                <div class="hero-stats" id="heroStats"></div>
+            </div>
+            <div class="hero-photo">
+                <span class="photo-fallback">NH</span>
+                <img id="profilePhoto" src="images/profile.svg" alt="Foto de Natan Hespanhol">
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experience.title">Experiência</h2>
+            <div class="timeline"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+            <div class="skills-grid"></div>
+        </div>
+    </section>
+
+    <!-- Domain Expertise Section -->
+    <section id="domain" class="domain section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="domain.title">Especialidades</h2>
+            <p class="section-subtitle" data-i18n="domain.subtitle"></p>
+            <div class="domain-grid"></div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="certifications.title">Certificações</h2>
+            <div class="certifications-grid"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+            <div class="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Beyond the Code Section -->
+    <section id="beyond" class="beyond section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="beyond.title">Além do Código</h2>
+            <p class="section-subtitle" data-i18n="beyond.subtitle"></p>
+            <div class="beyond-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text" data-i18n="contact.text"></p>
+                    <div class="contact-methods" id="contactMethods"></div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" data-i18n="contact.form.name" data-i18n-attr="placeholder" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" data-i18n="contact.form.email" data-i18n-attr="placeholder" placeholder="Seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" data-i18n="contact.form.message" data-i18n-attr="placeholder" placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year">2026</span> Natan Hespanhol. <span data-i18n="footer.copyright">Todos os direitos reservados.</span></p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+    <script src="data.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
